@@ -1,3 +1,5 @@
+package products
+
 enum class DiscountType(val discountFactor: Double) {
     Sommerschlussverkauf(0.4),
     MHD(0.1),

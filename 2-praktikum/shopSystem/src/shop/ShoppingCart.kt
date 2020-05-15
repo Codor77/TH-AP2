@@ -1,3 +1,7 @@
+package shop
+
+import products.Product
+
 class ShoppingCart () {
     val productAndQuantityList = mutableListOf<Pair<Product,Int>>()
 

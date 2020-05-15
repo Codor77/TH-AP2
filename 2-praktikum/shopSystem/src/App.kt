@@ -1,3 +1,7 @@
+import products.DiscountProduct
+import products.DiscountType
+import shop.ShoppingCart
+import shop.Warehouse
 import java.lang.Exception
 import java.util.Scanner
 
@@ -17,7 +21,7 @@ fun main () {
     warehouse.fillWarehouse("Kuchen",1.5,"Is halt n Kuchen",100.0)
     warehouse.fillWarehouse("Ananas",0.5,"Is halt ne Ananas",100.0)
     warehouse.fillWarehouse("Gurke",0.4,"Is halt ne Gurke",100.0)
-    warehouse.products.add(DiscountProduct("discountTest",50.0,"discont test",100.0,DiscountType.Sommerschlussverkauf))
+    warehouse.products.add(DiscountProduct("discountTest", 50.0, "discont test", 100.0, DiscountType.Sommerschlussverkauf))
 
     loop@ while (true) {
         info()
@@ -42,7 +46,7 @@ fun main () {
 
 fun addItems () {
     println()
-    println("Enter Product-Name:")
+    println("Enter products.Product-Name:")
     val newItemName = readLine()
     var newItemAmount : Int
     while (true) {

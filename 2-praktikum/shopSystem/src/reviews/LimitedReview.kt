@@ -1,3 +1,5 @@
+package reviews
+
 import kotlin.math.roundToInt
 
 class LimitedReview (private var points : Double, private val pInfo : String) : Review {

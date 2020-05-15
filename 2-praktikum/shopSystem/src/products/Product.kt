@@ -1,3 +1,7 @@
+package products
+
+import reviews.Review
+
 open class Product (val productName : String, val basePrice : Double, val description : String, open val salesPrice : Double) {
 
     val reviews = mutableListOf<Review>()
