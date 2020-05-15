@@ -1,11 +1,8 @@
 import products.DiscountProduct
 import products.DiscountType
-import shop.ShoppingCart
-import shop.Warehouse
-import java.lang.Exception
-import java.util.Scanner
+import shop.*
 
-val reader = Scanner(System.`in`)
+import java.lang.Exception
 
 val warehouse: Warehouse = Warehouse()
 val shoppingCart: ShoppingCart = ShoppingCart()
