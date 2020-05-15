@@ -43,4 +43,12 @@ class ShoppingCart () {
         return actualPrice
     }
 
+    fun hasPair (productName: String): Boolean {
+        return productAndQuantityList.any { it.first.productName == productName }
+    }
+
+    fun getPairByName (productName: String) : Pair<Product, Int> {
+        return productAndQuantityList.find { it.first.productName == productName }!!
+    }
+
 }

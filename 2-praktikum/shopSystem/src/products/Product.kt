@@ -5,7 +5,7 @@ import reviews.Review
 open class Product (val productName : String, val basePrice : Double, val description : String, open val salesPrice : Double) {
 
     val reviews = mutableListOf<Review>()
-    var stockUnits : MutableList<StockUnit> = mutableListOf<StockUnit>()
+    val stockUnits : MutableList<StockUnit> = mutableListOf<StockUnit>()
 
     val availableItems : Int
         get() = stockUnits.sumBy { it.quantity }
@@ -32,7 +32,7 @@ open class Product (val productName : String, val basePrice : Double, val descri
     }
 
     fun cleanStock() {
-        stockUnits = stockUnits.filterNot { it.isExpired || it.quantity <= 0 } as MutableList<StockUnit>
+        stockUnits.removeIf { it.isExpired || it.quantity <= 0 }
     }
 
     fun isPreferredQuantityAvailable (preferedQuantity : Int): Boolean {

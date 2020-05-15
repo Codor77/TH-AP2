@@ -1,5 +1,7 @@
 import products.DiscountProduct
 import products.DiscountType
+import products.Product
+import products.StockUnit
 import shop.*
 
 import java.lang.Exception
@@ -19,6 +21,15 @@ fun main () {
     warehouse.fillWarehouse("Ananas",0.5,"Is halt ne Ananas",100.0)
     warehouse.fillWarehouse("Gurke",0.4,"Is halt ne Gurke",100.0)
     warehouse.products.add(DiscountProduct("discountTest", 50.0, "discont test", 100.0, DiscountType.Sommerschlussverkauf))
+
+    val product : Product = Product("test",1.0,"test",2.0)
+    product.addStock(StockUnit(20,0))
+    product.addStock(StockUnit(0,25))
+    product.addStock(StockUnit(20,30))
+
+    println(product.availableItems)
+    product.cleanStock()
+    println(product.availableItems)
 
     loop@ while (true) {
         info()
@@ -59,6 +70,12 @@ fun addItems () {
     if (newItemName != null) {
         if (warehouse.hasProduct(newItemName)){
             val newProduct = warehouse.getProductByName(newItemName)
+
+            if (shoppingCart.hasPair(newProduct.productName)){
+                newItemAmount += shoppingCart.getPairByName(newProduct.productName).second
+                shoppingCart.productAndQuantityList.removeIf{ it.first.productName == newProduct.productName }
+            }
+
             if (newProduct.isPreferredQuantityAvailable(newItemAmount)) {
                 shoppingCart.productAndQuantityList.add(Pair(newProduct,newItemAmount))
             }
