@@ -2,7 +2,7 @@ package products
 
 import reviews.Review
 
-open class Product (val productName : String, val basePrice : Double, val description : String, open val salesPrice : Double) {
+open class Product (val productName : String, val basePrice : Double, open val salesPrice : Double, val description : String) {
 
     val reviews = mutableListOf<Review>()
     val stockUnits : MutableList<StockUnit> = mutableListOf<StockUnit>()

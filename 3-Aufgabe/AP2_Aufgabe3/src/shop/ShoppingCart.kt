@@ -3,6 +3,16 @@ package shop
 import products.Product
 
 class ShoppingCart () {
+
+    fun addProduct(product: Product, p_quantity: Int) {
+        var quantity = p_quantity
+        if (hasPair(product.productName)){
+            quantity += getPairByName(product.productName).second
+            productAndQuantityList.removeIf{ it.first.productName == product.productName }
+        }
+        productAndQuantityList.add(Pair(product,quantity))
+    }
+
     val productAndQuantityList = mutableListOf<Pair<Product,Int>>()
 
     val allProductsAvailable : Boolean
