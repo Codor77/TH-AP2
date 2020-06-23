@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c1e9677-c377-4d20-b58f-10209a1e0966" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderProcessing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderProcessing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderProcessingTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderProcessingTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/DiscountProduct.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/DiscountProduct.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shop/Warehouse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/Warehouse.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1aqNEcJ9hN0zsIb7uHlLXH2W7L8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2-Aufgabe/shopSystem" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.OrderProcessingTest">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProcessingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AP2_Aufgabe3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderProcessingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProcessingTest.insert orders sorted before smaller ones" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AP2_Aufgabe3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderProcessingTest" />
+      <option name="METHOD_NAME" value="insert orders sorted before smaller ones" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProcessingTest.remove the first order after calling processFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AP2_Aufgabe3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderProcessingTest" />
+      <option name="METHOD_NAME" value="remove the first order after calling processFirst" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderProcessingTest.sort orders by volume " type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AP2_Aufgabe3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderProcessingTest" />
+      <option name="METHOD_NAME" value="sort orders by volume (desc)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="AP2_Aufgabe3" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="TestKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OrderProcessingTest" />
+        <item itemvalue="Kotlin.TestKt" />
+        <item itemvalue="JUnit.OrderProcessingTest.remove the first order after calling processFirst" />
+        <item itemvalue="JUnit.OrderProcessingTest.sort orders by volume " />
+        <item itemvalue="JUnit.OrderProcessingTest.insert orders sorted before smaller ones" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../gitbucket" value="1486981278000" />
+        <entry key="$PROJECT_DIR$/../lwm-reloaded" value="1448377927000" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Desktop/play-scala-isolated-slick-example-2.7.x" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/play-scala-slick-example-2.7.x" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../lwm-reloaded" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../play-scala-starter-example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/play-scala-hello-world-tutorial" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c1e9677-c377-4d20-b58f-10209a1e0966" name="Default Changelist" comment="" />
+      <created>1587459053234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587459053234</updated>
+      <workItem from="1587459054849" duration="1222000" />
+      <workItem from="1587466745576" duration="9076000" />
+      <workItem from="1587475893846" duration="6000" />
+      <workItem from="1587475936426" duration="103000" />
+      <workItem from="1587476345330" duration="1033000" />
+      <workItem from="1587477894003" duration="637000" />
+      <workItem from="1592823206859" duration="6985000" />
+      <workItem from="1592903456937" duration="11392000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1368" y="4" width="1368" height="1820" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592913997773">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state x="1368" y="4" width="1368" height="1820" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2736.1824@0.0.2736.1824" timestamp="1592913997773" />
+    <state x="486" y="409" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587459519123">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="486" y="409" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587459519123" />
+    <state x="989" y="531" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1587477193512">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="989" y="531" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587477193512" />
+    <state x="623" y="280" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587478552295">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="623" y="280" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478552295" />
+    <state x="1099" y="633" width="528" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592914642247">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state x="1099" y="633" width="528" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2736.1824@0.0.2736.1824" timestamp="1592914642247" />
+    <state x="640" y="390" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1587460057253">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="640" y="390" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587460057253" />
+    <state x="1149" y="642" width="428" height="486" key="FileChooserDialogImpl" timestamp="1592824297536">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state x="1149" y="642" width="428" height="486" key="FileChooserDialogImpl/0.0.2736.1824@0.0.2736.1824" timestamp="1592824297536" />
+    <state width="2690" height="532" key="GridCell.Tab.0.bottom" timestamp="1592928098479">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state width="2690" height="532" key="GridCell.Tab.0.bottom/0.0.2736.1824@0.0.2736.1824" timestamp="1592928098479" />
+    <state width="1584" height="400" key="GridCell.Tab.0.bottom/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478592037" />
+    <state width="2690" height="532" key="GridCell.Tab.0.center" timestamp="1592928098479">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state width="2690" height="532" key="GridCell.Tab.0.center/0.0.2736.1824@0.0.2736.1824" timestamp="1592928098479" />
+    <state width="1584" height="400" key="GridCell.Tab.0.center/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478592036" />
+    <state width="2690" height="532" key="GridCell.Tab.0.left" timestamp="1592928098478">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state width="2690" height="532" key="GridCell.Tab.0.left/0.0.2736.1824@0.0.2736.1824" timestamp="1592928098478" />
+    <state width="1584" height="400" key="GridCell.Tab.0.left/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478592035" />
+    <state width="2690" height="532" key="GridCell.Tab.0.right" timestamp="1592928098479">
+      <screen x="0" y="0" width="2736" height="1824" />
+    </state>
+    <state width="2690" height="532" key="GridCell.Tab.0.right/0.0.2736.1824@0.0.2736.1824" timestamp="1592928098479" />
+    <state width="1584" height="400" key="GridCell.Tab.0.right/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478592037" />
+    <state x="769" y="658" key="ReplaceDuplicatesPrompt" timestamp="1587470981625">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="769" y="658" key="ReplaceDuplicatesPrompt/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587470981625" />
+    <state x="639" y="393" key="SettingsEditor" timestamp="1587477257393">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="639" y="393" key="SettingsEditor/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587477257393" />
+    <state x="580" y="635" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1587459503216">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="580" y="635" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587459503216" />
+    <state x="640" y="468" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1587459735458">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="640" y="468" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587459735458" />
+    <state x="637" y="346" key="run.anything.popup" timestamp="1587478114839">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="637" y="346" key="run.anything.popup/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587478114839" />
+    <state x="637" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1587472689646">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state x="637" y="348" width="670" height="676" key="search.everywhere.popup/0.23.3440.1417/-1680.413.1680.1027@0.23.3440.1417" timestamp="1587472689646" />
+  </component>
+</project>

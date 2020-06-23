@@ -1,3 +1,4 @@
+
 import shop.ShoppingCart
 import products.Product
 import OrderProcessing.OrderNode
@@ -101,12 +102,12 @@ class OrderProcessingTest {
         val list = OrderProcessing()
 
         val cart = ShoppingCart().apply {
-            addProduct(Product("", 1.0, 2.0, ""), 5) // 10
-            addProduct(Product("", 2.0, 2.5, ""), 5) // 12.5
+            addProduct(Product("1", 1.0, 2.0, ""), 5) // 10
+            addProduct(Product("2", 2.0, 2.5, ""), 5) // 12.5
         }
 
         val cart2 = ShoppingCart().apply {
-            addProduct(Product("", 1.0, 3.0, ""), 5) // 15
+            addProduct(Product("3", 1.0, 3.0, ""), 5) // 15
         }
 
         list.first = OrderNode(
@@ -195,14 +196,10 @@ class OrderProcessingTest {
             insertBeforeSmallerVolumes(order3)
         }
 
-        val expected = OrderNode(
-            order1,
-            OrderNode(
-                order3,
-                OrderNode(
-                    order2,
-                    null
-                )
+        val expected = OrderNode(order1,
+                       OrderNode(order3,
+                       OrderNode(order2,
+                       null)
             )
         )
 
