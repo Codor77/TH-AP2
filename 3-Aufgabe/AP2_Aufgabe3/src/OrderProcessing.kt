@@ -1,4 +1,5 @@
 import products.Product
+import java.lang.IllegalStateException
 
 class OrderProcessing {
     /*** Basisstruktur für verkettete Liste ***/
@@ -20,8 +21,7 @@ class OrderProcessing {
                 node = node.next!!
                 println("${counter}: ${node.order.totalPrice}")
             }
-        }
-        else
+        } else
             println("empty")
     }
 
@@ -37,7 +37,7 @@ class OrderProcessing {
             var lastTotalPrice: Double = node.order.totalPrice
             while (node.next != null) {
                 node = node.next!!
-                if(lastTotalPrice < node.order.totalPrice)
+                if (lastTotalPrice < node.order.totalPrice)
                     return false
             }
             return true
@@ -82,8 +82,7 @@ class OrderProcessing {
         if (isEmpty) {
             first = OrderNode(order, null)
             last = first
-        }
-        else {
+        } else {
             last!!.next = OrderNode(order, null)
             last = last!!.next
         }
@@ -93,10 +92,9 @@ class OrderProcessing {
     fun insertBeforeSmallerVolumes(order: Order) {
         if (!isEmpty) {
             var node: OrderNode = first!!
-            if (node.order.totalPrice < order.totalPrice){
+            if (node.order.totalPrice < order.totalPrice) {
                 first = OrderNode(order, first)
-            }
-            else {
+            } else {
                 while (node.next != null && node.next!!.order.totalPrice > order.totalPrice) {
                     node = node.next!!
                 }
@@ -104,8 +102,7 @@ class OrderProcessing {
                 if (node.next!!.next == null)
                     last = node.next
             }
-        }
-        else
+        } else
             append(order)
     }
 
@@ -128,30 +125,72 @@ class OrderProcessing {
 
     // Verarbeitet die erste Bestellung und entfernt diese aus der Liste
     fun processFirst() {
-        // TODO
+        if (!isEmpty) {
+            first!!.order.shoppingCart.buyEverything()
+            first = first!!.next
+        }
     }
 
     // Vearbeitet die Bestellung mit dem höchsten Auftragsvolumen
     // und entfernt diese aus der Liste
     fun processHighest() {
-        // TODO
+        if (!isEmpty) {
+            var node = first!!
+            var nodeBeforeHighest: OrderNode? = null
+            var highestVolume = node.order.totalPrice
+
+            while (node.next != null) {
+                if (highestVolume < node.next!!.order.totalPrice) {
+                    nodeBeforeHighest = node
+                    highestVolume = node.next!!.order.totalPrice
+                } else
+                    node = node.next!!
+            }
+            if (nodeBeforeHighest == null)
+                processFirst()
+            else {
+                nodeBeforeHighest.next!!.order.shoppingCart.buyEverything()
+                nodeBeforeHighest.next = nodeBeforeHighest.next!!.next
+            }
+        }
     }
 
     // Verarbeitet alle Aufträge für die Stadt in einem Rutsch
     // und entfernt diese aus der Lite
     fun processAllFor(city: String) {
-        // TODO
+        if (!isEmpty) {
+            while (first!!.order.address.city.equals(city)) {
+                processFirst()
+            }
+            var node = first!!
+            var processingNode: OrderNode
+
+            while (node.next != null) {
+                processingNode = node.next!!
+                if (processingNode.order.address.city.equals(city)) {
+                    processingNode.order.shoppingCart.buyEverything()
+                    node.next = processingNode.next
+                } else
+                    node = node.next!!
+            }
+        }
     }
 
     // Verarbeite alle Bestellungen. Die Liste ist danach leer.
     fun processAll() {
-        // TODO
+        for (order in this){
+            order.shoppingCart.buyEverything()
+        }
+        first = null
     }
 
     // ** Funktionen zum Analysieren**
 
     // Analysiert alle order mit der analyzer Funktion
-    fun analyzeAll(analyzer: (Order) -> String): String = "" // TODO
+    fun analyzeAll(analyzer: (Order) -> String): String {
+        return "test"
+    }
+
 
     // Prüft, ob für ein Produkt einer der Bestellungen
     // die predicate Funktion erfüllt wird
@@ -160,4 +199,40 @@ class OrderProcessing {
     // Erzeugt ein neues OrderProcessing Objekt, in dem nur noch
     // Order enthalten, für die die predicate Funktion true liefert
     fun filter(predicate: (Order) -> Boolean): OrderProcessing = this // TODO
+
+
+    operator fun iterator(): MutableIterator<Order> {
+        return OrderProcessingIterator(this)
+    }
+
+    class OrderProcessingIterator(private val parent: OrderProcessing) : MutableIterator<Order> {
+        private var beforeReturned: OrderNode? = null
+        private var lastReturned: OrderNode? = null
+        private var current = parent.first
+
+        override fun hasNext(): Boolean {
+            return current != null
+        }
+
+        override fun next(): Order {
+            val out = current ?: throw NoSuchElementException()
+            if (lastReturned != null)
+                beforeReturned = lastReturned
+            lastReturned = current
+            current = current!!.next
+            return out.order
+        }
+
+        override fun remove() {
+            if (lastReturned != null) {
+                if (beforeReturned != null)
+                    beforeReturned!!.next = current
+                else
+                    parent.first = current
+                lastReturned = null
+            } else
+                throw IllegalStateException("Can't remove the latest element before any have been requested")
+        }
+
+    }
 }

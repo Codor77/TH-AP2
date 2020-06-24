@@ -25,6 +25,8 @@ class ShoppingCart () {
                 it.first.salesPrice * it.second
             }
 
+
+
     var listOfAllProducts : String = ""
         get() {
             field = ""
