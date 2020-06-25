@@ -395,12 +395,14 @@ class OrderProcessingTest {
     @Test
     fun `analyze all orders by concatenating individual strings`() {
         val list = OrderProcessing().apply {
-            append(Order(ShoppingCart(), Address("", "", "", "GM")))
-            append(Order(ShoppingCart(), Address("", "", "", "K")))
-            append(Order(ShoppingCart(), Address("", "", "", "HH")))
+            append(Order(ShoppingCart(), Address("", "Maier", "", "GM")))
+            append(Order(ShoppingCart(), Address("", "Müller", "", "K")))
+            append(Order(ShoppingCart(), Address("", "Schmitz", "", "HH")))
         }
 
         assertEquals("GMKHH", list.analyzeAll { it.address.city })
+        // custom:
+        assertEquals("MaierMüllerSchmitz", list.analyzeAll { it.address.lastName })
     }
 
     @Test

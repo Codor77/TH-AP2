@@ -29,7 +29,7 @@ class OrderProcessing {
 
     // Sind die Items absteigend sortiert?
     fun isSorted(): Boolean {
-        if (isEmpty)
+        if (size <= 1)
             return true
         var lastOrder: Order? = null
         for (order in this){
