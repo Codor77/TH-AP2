@@ -13,14 +13,11 @@ class OrderProcessing {
     /*** Custom ***/
     fun print() {
         if (!isEmpty) {
-            var node: OrderNode = first!!
             var counter: Int = 1
-            println("${counter}: ${node.order.totalPrice}")
-            while (node.next != null) {
-                counter += 1
-                node = node.next!!
-                println("${counter}: ${node.order.totalPrice}")
-            }
+           for (order in this){
+               println("${counter}: ${order.totalPrice}")
+               counter += 1
+           }
         } else
             println("empty")
     }
@@ -32,15 +29,15 @@ class OrderProcessing {
 
     // Sind die Items absteigend sortiert?
     fun isSorted(): Boolean {
-        if (!isEmpty) {
-            var node: OrderNode = first!!
-            var lastTotalPrice: Double = node.order.totalPrice
-            while (node.next != null) {
-                node = node.next!!
-                if (lastTotalPrice < node.order.totalPrice)
+        if (isEmpty)
+            return true
+        var lastOrder: Order? = null
+        for (order in this){
+            if (lastOrder != null){
+                if (lastOrder.totalPrice < order.totalPrice)
                     return false
             }
-            return true
+            lastOrder = order
         }
         return true
     }
@@ -48,31 +45,29 @@ class OrderProcessing {
     // Berechnet den Gesamtwert aller Bestellungen
     val totalVolume: Double
         get() {
-            if (!isEmpty) {
-                var node: OrderNode = first!!
-                var returnValue: Double = node.order.totalPrice
-                while (node.next != null) {
-                    node = node.next!!
-                    returnValue += node.order.totalPrice
-                }
-                return returnValue
+            if (isEmpty)
+                return 0.0
+            var node: OrderNode = first!!
+            var returnValue: Double = node.order.totalPrice
+            while (node.next != null) {
+                node = node.next!!
+                returnValue += node.order.totalPrice
             }
-            return 0.0
+            return returnValue
         }
 
     // Anzahl der Bestellungen
     val size: Int
         get() {
-            if (!isEmpty) {
-                var node: OrderNode = first!!
-                var returnValue: Int = 1
-                while (node.next != null) {
-                    returnValue += 1
-                    node = node.next!!
-                }
-                return returnValue
+            if (isEmpty)
+                return 0
+            var node: OrderNode = first!!
+            var returnValue: Int = 1
+            while (node.next != null) {
+                returnValue += 1
+                node = node.next!!
             }
-            return 0
+            return returnValue
         }
 
     // ** Funktionen zum Einfügen **
@@ -125,10 +120,8 @@ class OrderProcessing {
 
     // Verarbeitet die erste Bestellung und entfernt diese aus der Liste
     fun processFirst() {
-        if (!isEmpty) {
-            first!!.order.shoppingCart.buyEverything()
-            first = first!!.next
-        }
+        first?.order?.shoppingCart?.buyEverything()
+            first = first?.next
     }
 
     // Vearbeitet die Bestellung mit dem höchsten Auftragsvolumen
@@ -188,17 +181,36 @@ class OrderProcessing {
 
     // Analysiert alle order mit der analyzer Funktion
     fun analyzeAll(analyzer: (Order) -> String): String {
-        return "test"
+        var returnValue = ""
+        for (order in this){
+            returnValue = returnValue.plus(analyzer(order))
+        }
+        return returnValue
     }
 
 
     // Prüft, ob für ein Produkt einer der Bestellungen
     // die predicate Funktion erfüllt wird
-    fun anyProduct(predicate: (Product) -> Boolean): Boolean = false // TODO
+    fun anyProduct(predicate: (Product) -> Boolean): Boolean {
+        for (order in this){
+            order.shoppingCart.productAndQuantityList.forEach {
+                if (predicate(it.first))
+                    return true
+            }
+        }
+        return false
+    }
 
     // Erzeugt ein neues OrderProcessing Objekt, in dem nur noch
     // Order enthalten, für die die predicate Funktion true liefert
-    fun filter(predicate: (Order) -> Boolean): OrderProcessing = this // TODO
+    fun filter(predicate: (Order) -> Boolean): OrderProcessing {
+        val newOrderProcessing = OrderProcessing()
+        for (order in this){
+            if (predicate(order))
+                newOrderProcessing.append(order)
+        }
+        return newOrderProcessing
+    }
 
 
     operator fun iterator(): MutableIterator<Order> {
