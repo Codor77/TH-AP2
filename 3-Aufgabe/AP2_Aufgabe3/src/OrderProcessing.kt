@@ -103,7 +103,7 @@ class OrderProcessing {
 
     // Sortiert nach Auftragsvolumen
     fun sortyByVolume() {
-        if (!isEmpty) {
+        if (!isSorted()) {
             var oldFirst: OrderNode = first!!
             first = null
             last = null
@@ -127,23 +127,23 @@ class OrderProcessing {
     // Vearbeitet die Bestellung mit dem höchsten Auftragsvolumen
     // und entfernt diese aus der Liste
     fun processHighest() {
-        if (!isEmpty) {
-            var node = first!!
-            var nodeBeforeHighest: OrderNode? = null
-            var highestVolume = node.order.totalPrice
+        if (isSorted())
+            processFirst()
+        else {
+            if (!isEmpty) {
+                var node = first!!
+                var nodeBeforeHighest: OrderNode? = null
+                var highestVolume = node.order.totalPrice
 
-            while (node.next != null) {
-                if (highestVolume < node.next!!.order.totalPrice) {
-                    nodeBeforeHighest = node
-                    highestVolume = node.next!!.order.totalPrice
-                } else
-                    node = node.next!!
-            }
-            if (nodeBeforeHighest == null)
-                processFirst()
-            else {
-                nodeBeforeHighest.next!!.order.shoppingCart.buyEverything()
-                nodeBeforeHighest.next = nodeBeforeHighest.next!!.next
+                while (node.next != null) {
+                    if (highestVolume < node.next!!.order.totalPrice) {
+                        nodeBeforeHighest = node
+                        highestVolume = node.next!!.order.totalPrice
+                    } else
+                        node = node.next!!
+                }
+                nodeBeforeHighest!!.next!!.order.shoppingCart.buyEverything()
+                nodeBeforeHighest!!.next = nodeBeforeHighest.next!!.next
             }
         }
     }
