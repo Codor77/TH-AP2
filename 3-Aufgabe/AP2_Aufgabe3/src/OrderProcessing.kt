@@ -175,10 +175,12 @@ class OrderProcessing {
 
     // Verarbeite alle Bestellungen. Die Liste ist danach leer.
     fun processAll() {
-        for (order in this){
-            order.shoppingCart.buyEverything()
+        if (!isEmpty) {
+            for (order in this) {
+                order.shoppingCart.buyEverything()
+            }
+            first = null
         }
-        first = null
     }
 
     // ** Funktionen zum Analysieren**
