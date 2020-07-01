@@ -142,8 +142,12 @@ class OrderProcessing {
                     } else
                         node = node.next!!
                 }
-                nodeBeforeHighest!!.next!!.order.shoppingCart.buyEverything()
-                nodeBeforeHighest!!.next = nodeBeforeHighest.next!!.next
+                if (nodeBeforeHighest == null)
+                    processFirst()
+                else {
+                    nodeBeforeHighest.next!!.order.shoppingCart.buyEverything()
+                    nodeBeforeHighest.next = nodeBeforeHighest.next!!.next
+                }
             }
         }
     }
